@@ -4,6 +4,9 @@ const https = require('https');
 const express = require('express');
 const app = express();
 // const EmailAddress = require("email_address");
+var token = config.MY_API_TOKEN;
+var key = config.SECRET_API_KEY;
+
 
 app.use(express.static("public"));
 
@@ -39,11 +42,11 @@ app.post("/", function(req, res) {
 
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us6.api.mailchimp.com/3.0/lists/5df0281ecb";
+  const url = "https://us6.api.mailchimp.com/3.0/lists/"+token;
 
   const options = {
     method: "POST",
-    auth: "monika:0e4396f0252ab1ee2e7bf4cf0822f3d6-us6"
+    auth: "monika:"+key
   }
 
 
@@ -76,11 +79,3 @@ app.post("/failure", function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000.");
 });
-
-
-
-//api key
-//0e4396f0252ab1ee2e7bf4cf0822f3d6-us6
-
-//list audience
-//5df0281ecb
