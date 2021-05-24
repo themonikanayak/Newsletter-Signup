@@ -1,9 +1,13 @@
 # Newsletter-Signup
 
 • Developed a server-side project that uses Mailchimp’s API to create a working, real-world newsletter sign-up form application.
+
 • It accepts name and email address of users and allow website admin to keep track of all the details in the Mailchimp’s mailing list.
+
 • Used Express.js, a Node.js (server-side) scripting framework to build out the back-end, and Bootstrap to style the application.
+
 • Hosted on Heroku with a database hosted on Mailchimp.
+
 
 # Link
 
